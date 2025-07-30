@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To DO APP</title>
+</head>
+<link rel="stylesheet" href="todo.css">
+<body>
+    <h1 id="main-heading">PlanIT</h1>
+    <div class="form-container">
+    <input id="todo-input" type="text" placeholder="Enter the task">
+    <input id="todo-date" type="date">
+    <button onclick="addtodo();">ADD</button>
+</div>
+<div class="dashboard-tabs">
+  <button id="tasks-tab" class="active-tab" onclick="showTasks()">Tasks</button>
+<button id="planner-tab" onclick="showPlanner()">Weekly Planner</button>
+</div>
+
+<div class="todo-items"></div>
+
+<div class="weekly-planner-wrapper">
+    <div class="weekly-planner">
+     <table class="planner-table">
+    <thead>
+      <tr>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </tr>
+    </thead>
+    <tbody>
+  <tr>
+    <td id="day-sun">
+      <input type="text" placeholder="Add task" onkeydown="handlePlannerInput(event, 'day-sun')">
+    </td>
+    <td id="day-mon">
+      <input type="text" placeholder="Add task" onkeydown="handlePlannerInput(event, 'day-mon')">
+    </td>
+    <td id="day-tue">
+      <input type="text" placeholder="Add task" onkeydown="handlePlannerInput(event, 'day-tue')">
+    </td>
+    <td id="day-wed">
+      <input type="text" placeholder="Add task" onkeydown="handlePlannerInput(event, 'day-wed')">
+    </td>
+    <td id="day-thu">
+      <input type="text" placeholder="Add task" onkeydown="handlePlannerInput(event, 'day-thu')">
+    </td>
+    <td id="day-fri">
+      <input type="text" placeholder="Add task" onkeydown="handlePlannerInput(event, 'day-fri')">
+    </td>
+    <td id="day-sat">
+      <input type="text" placeholder="Add task" onkeydown="handlePlannerInput(event, 'day-sat')">
+    </td>
+  </tr>
+</tbody>
+  </table>
+    </div>
+</div>
+
+    <script src="todo.js"></script>
+</body>
+</html>
